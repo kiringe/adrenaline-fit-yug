@@ -1,0 +1,559 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    scroll-behavior: smooth;
+  }
+
+.reg{
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+#home{
+  position: relative; /* важно - для того, чтобы псевдоэлемент позиционировался относительно этого элемента */
+  border-top: 65px solid transparent;
+  margin-top: -65px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+#about, #services, #reviews, #contacts, #articles{
+  position: relative; /* важно - для того, чтобы псевдоэлемент позиционировался относительно этого элемента */
+  border-top: 64px solid transparent;
+  margin-top: -64px;
+  -moz-background-clip: padding;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+}
+
+
+.navigation .active {
+  background: #333;
+  color: #fff;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.color1 {
+  /* background-color: white; */
+  background-color: #2f2f2f;
+}
+  
+.color2 {
+  /* background-color: rgb(243, 244, 247); */
+  background-color: #212022;
+}
+
+header {
+  background-color: rgb(97, 37, 165);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+nav {
+  text-align: center;
+  align-items: center;
+  height: 65px;
+  display: flex;
+  justify-content: center;
+}
+  
+nav a {
+  margin-right: 2.5%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 26px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+}
+
+.menu-item.active {
+  color: #db8f1c; /* Меняем цвет текста */
+  -webkit-text-shadow: 2px 2px 2px #000;
+  -moz-text-shadow: 2px 2px 2px #000;
+      text-shadow: 2px 2px 2px #000;
+}
+
+nav a:last-child{
+  display: inline-block;
+  margin-right: 0%;
+  text-decoration: none;
+  color: #fff;
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1;
+  -webkit-transition: all 0.5s ease;
+      transition: all 0.5s ease;
+}
+  
+nav a:hover {
+  color: #db8f1c; /* Меняем цвет текста */
+  -webkit-text-shadow: 2px 2px 2px #000;
+  -moz-text-shadow: 2px 2px 2px #000;
+      text-shadow: 2px 2px 2px #000;
+}
+nav a:last-child:hover {
+  color: #cc800f; /* Меняем цвет текста */
+  -webkit-text-shadow: 0px 0px 0px #000;
+  -moz-text-shadow: 0px 0px 0px #000;
+      text-shadow: 0px 0px 0px #000;
+  background-color: white;
+}
+
+.slider {
+  width: 853.338px; 
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.slides {
+  display: flex;
+  width: 900%;
+}
+.slides .slide {
+  width: 16.66666%;
+}
+.slides .slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  justify-content: space-between;
+}
+.pagination {
+  position: absolute;
+  bottom: 65px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+}
+.prev-btn, .next-btn {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+}
+.pagination button {
+  padding: 10px;
+  border: none;
+  border-radius: 50%;
+  margin: 0 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.pagination button:hover {
+  transform: scale(1.2);
+}
+.pagination button.active {
+  background-color: #fff;
+}
+
+.p_about{
+  margin-bottom: 10px;
+}
+
+.znaki{
+  display: flex;
+  justify-content: center;
+  padding-bottom: 10px;
+  align-items: center;
+}
+
+.znaki_img{
+  text-align: center;
+  align-items: center;
+  height: 40px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+section {
+  padding-left: 15%;
+  padding-right: 15%;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+footer {
+  background-color:  rgb(97, 37, 165);
+  padding: 20px;
+  text-align: center;
+}
+
+.homee{
+  padding-top: 30px;
+  padding-bottom: 40px;
+  padding-left: 150px;
+  display: flex;
+}
+
+.tovars{
+  display: grid;
+  grid-template-columns: 255px 255px 255px 255px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-content: center;
+}
+
+a.tovar {
+  text-decoration: none;
+}
+
+.tovar_div{
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #ffffff55;
+  border-radius: 10px;
+}
+
+.tovar_div_last{
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #ffffff55;
+  border-radius: 10px;
+  padding-bottom: 19.2px;
+}
+
+.p_name{
+  max-width: 246px;
+  margin-bottom: 5px;
+  padding-left: 3px;
+  text-align: left;
+}
+
+.p_cost{
+  padding-left: 3px;
+  text-align: left;
+}
+
+.img_tovar{
+  height: 246px;
+  width: 246px;
+  margin-bottom: 5px;
+}
+
+.buttons{
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 30px;
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.buttons_1{
+  color: Black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.buttons_2{
+  color: Black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 6px;
+}
+
+.buttons_img{
+  text-align: center;
+  align-items: center;
+  height: 20px;
+  margin-right: 2px;
+  margin-left: 5px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  animation-duration: 1s;
+  background-color: rgb(193, 172, 219);
+}
+
+button.a:hover{
+  color: white;
+}
+
+.button_dop1{
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 30px;
+  margin-right: 10px;
+}
+
+.button_dop2{
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 30px;
+}
+
+.button_dop_a{
+  color: Black;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  margin-right: 5px;
+}
+
+.button_dop_img{
+  text-align: center;
+  align-items: center;
+  height: 25px;
+  margin-right: 2px;
+  margin-left: 5px;
+}
+
+.description_small{
+  max-width: 600px;
+  margin-bottom: 5px;
+  padding-left: 3px;
+  text-align: left;
+}
+
+.description_big{
+  max-width: 600px;
+  text-align: justify;
+}
+
+.review {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.review-header {
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.review-header h3 {
+  margin: 0;
+  color: #333;
+}
+
+.review-header p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.review-content {
+  margin-top: 10px;
+}
+
+.review-content p {
+  font-size: 13px;
+  line-height: 1.5;
+  color: black;
+  padding-left: 12px;
+  text-align: justify;
+}
+
+.rating {
+  display: inline-block;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  float: right;
+  color: gold;
+  font-size: 20px;
+}
+
+.rating label:before {
+  content: '\2605';
+  margin: 2px;
+}
+
+img.review{
+  border-radius: 50%;
+  margin-right: 5px;
+  background-color:#f9f9f9;
+  padding: 0px;
+  margin: 0px;
+  margin-right: 10px;
+}
+
+div.review_block{
+  display: flex;
+  align-items: center;
+}
+
+div.review_block2{
+  display: flex;
+  flex-direction: column;
+}
+
+.icon{
+  border-radius: 50%;
+  height: 42px;
+  width: 42px;
+  text-align: center;
+  padding-top: 10px;
+  margin-right: 10px;
+  font-size: 17px;
+}
+
+/* свойства модального окна по умолчанию */
+.modal {
+  position: fixed; /* фиксированное положение */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0,0,0,0.5); /* цвет фона */
+  z-index: 1050;
+  opacity: 0; /* по умолчанию модальное окно прозрачно */
+  -webkit-transition: opacity 200ms ease-in; 
+  -moz-transition: opacity 200ms ease-in;
+  transition: opacity 200ms ease-in; /* анимация перехода */
+  pointer-events: none; /* элемент невидим для событий мыши */
+  margin: 0;
+  padding: 0;
+}
+/* при отображении модального окно */
+.modal:target {
+  opacity: 1; /* делаем окно видимым */
+    pointer-events: auto; /* элемент видим для событий мыши */
+  overflow-y: auto; /* добавляем прокрутку по y, когда элемент не помещается на страницу */
+}
+/* ширина модального окна и его отступы от экрана */
+.modal-dialog {
+  position: relative;
+  width: auto;
+  margin: 10px;
+}
+@media (min-width: 576px) {
+.modal-dialog {
+    max-width: 500px;
+    margin: 30px auto; /* для отображения модального окна по центру */
+}
+}
+/* свойства для блока, содержащего контент модального окна */ 
+.modal-content {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #3d3d3d;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.2);
+  border-radius: .3rem;
+  outline: 0;
+  width: 1100px;
+  left: -58.5%;
+}
+@media (min-width: 768px) {
+.modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0,0,0,.5);
+    box-shadow: 0 5px 15px rgba(0,0,0,.5);
+}
+}
+/* свойства для заголовка модального окна */
+.modal-header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eceeef;
+}
+.modal-title {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+/* свойства для кнопки "Закрыть" */
+.close {
+  float: right;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 1px 0 #fff;
+  opacity: .5;
+  text-decoration: none;
+}
+/* свойства для кнопки "Закрыть" при нахождении её в фокусе или наведении */
+.close:focus, .close:hover {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+  opacity: .75;
+}
+/* свойства для блока, содержащего основное содержимое окна */
+.modal-body {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 15px;
+  padding-top: 0;
+  overflow: auto;
+}
+
+.one{
+  text-align: justify;
+  color: #ffffffe7;
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.bor{
+  border: 2px solid grey;
+  border-radius: 0 0 10px 10px;
+}
+
+.zag{
+  text-align: center;
+  padding-left: 10px;
+  padding-right: 10px;
+}

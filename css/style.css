@@ -364,6 +364,21 @@ button.a:hover{
 
 .review-content {
   margin-top: 10px;
+  max-height: 35px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.read-more-btn {
+  margin-left: 40%;
+  padding: 10px;
+  background-color: #2f2f2fbd;
+  color: white;
+  border: none;
+  text-align: center;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 13px;
 }
 
 .review-content p {
@@ -373,6 +388,10 @@ button.a:hover{
   padding-left: 12px;
   text-align: justify;
 }
+
+
+
+
 
 .rating {
   display: inline-block;

@@ -54,3 +54,19 @@ function autoplay() {
 slides.style.transition = "transform 0.5s ease-in-out";
 setInterval(autoplay, 4000);
 updateSlider();
+
+document.addEventListener('DOMContentLoaded', function() {
+    const readMoreButtons = document.querySelectorAll('.read-more-btn');
+    readMoreButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            const reviewText = this.previousElementSibling;
+            if (reviewText.style.maxHeight === 'none') {
+                reviewText.style.maxHeight = '35px';
+                this.textContent = 'Читать далее';
+            } else {
+                reviewText.style.maxHeight = 'none';
+                this.textContent = 'Скрыть';
+            }
+        });
+    });
+});
